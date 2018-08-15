@@ -15,6 +15,10 @@
 		71F8CF6D212496CB00F8CDF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F8CF6B212496CB00F8CDF7 /* LaunchScreen.storyboard */; };
 		71F8CF78212496CB00F8CDF7 /* MultiUselessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF77212496CB00F8CDF7 /* MultiUselessTests.swift */; };
 		71F8CF83212496CB00F8CDF7 /* MultiUselessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF82212496CB00F8CDF7 /* MultiUselessUITests.swift */; };
+		71F8CF912124AA5A00F8CDF7 /* Hotdog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F8CF902124AA5A00F8CDF7 /* Hotdog.storyboard */; };
+		71F8CF942124AC4C00F8CDF7 /* HotDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF932124AC4C00F8CDF7 /* HotDogViewController.swift */; };
+		71F8CF962124ACE300F8CDF7 /* HotDogScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 71F8CF952124ACE300F8CDF7 /* HotDogScene.sks */; };
+		71F8CFD82124AF6000F8CDF7 /* HotDogScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CFD72124AF6000F8CDF7 /* HotDogScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		71F8CF7E212496CB00F8CDF7 /* MultiUselessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiUselessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F8CF82212496CB00F8CDF7 /* MultiUselessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiUselessUITests.swift; sourceTree = "<group>"; };
 		71F8CF84212496CB00F8CDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71F8CF902124AA5A00F8CDF7 /* Hotdog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hotdog.storyboard; sourceTree = "<group>"; };
+		71F8CF932124AC4C00F8CDF7 /* HotDogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDogViewController.swift; sourceTree = "<group>"; };
+		71F8CF952124ACE300F8CDF7 /* HotDogScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HotDogScene.sks; sourceTree = "<group>"; };
+		71F8CFD72124AF6000F8CDF7 /* HotDogScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDogScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,7 @@
 		71F8CF53212496C900F8CDF7 = {
 			isa = PBXGroup;
 			children = (
+				71F8CF922124AA9300F8CDF7 /* HotDog */,
 				71F8CF5E212496C900F8CDF7 /* MultiUseless */,
 				71F8CF76212496CB00F8CDF7 /* MultiUselessTests */,
 				71F8CF81212496CB00F8CDF7 /* MultiUselessUITests */,
@@ -126,6 +135,17 @@
 				71F8CF84212496CB00F8CDF7 /* Info.plist */,
 			);
 			path = MultiUselessUITests;
+			sourceTree = "<group>";
+		};
+		71F8CF922124AA9300F8CDF7 /* HotDog */ = {
+			isa = PBXGroup;
+			children = (
+				71F8CF902124AA5A00F8CDF7 /* Hotdog.storyboard */,
+				71F8CF932124AC4C00F8CDF7 /* HotDogViewController.swift */,
+				71F8CF952124ACE300F8CDF7 /* HotDogScene.sks */,
+				71F8CFD72124AF6000F8CDF7 /* HotDogScene.swift */,
+			);
+			path = HotDog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				71F8CF6D212496CB00F8CDF7 /* LaunchScreen.storyboard in Resources */,
+				71F8CF912124AA5A00F8CDF7 /* Hotdog.storyboard in Resources */,
+				71F8CF962124ACE300F8CDF7 /* HotDogScene.sks in Resources */,
 				71F8CF6A212496CB00F8CDF7 /* Assets.xcassets in Resources */,
 				71F8CF65212496C900F8CDF7 /* Main.storyboard in Resources */,
 			);
@@ -259,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F8CFD82124AF6000F8CDF7 /* HotDogScene.swift in Sources */,
 				71F8CF68212496C900F8CDF7 /* MultiUseless.xcdatamodeld in Sources */,
+				71F8CF942124AC4C00F8CDF7 /* HotDogViewController.swift in Sources */,
 				71F8CF62212496C900F8CDF7 /* ViewController.swift in Sources */,
 				71F8CF60212496C900F8CDF7 /* AppDelegate.swift in Sources */,
 			);
