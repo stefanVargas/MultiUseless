@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601A6BF72124A9AB00B805F8 /* PigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601A6BF62124A9AB00B805F8 /* PigViewController.swift */; };
+		601A6BF92124AA2B00B805F8 /* PigStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601A6BF82124AA2B00B805F8 /* PigStoryBoard.storyboard */; };
+		601A6BFB2124AB2A00B805F8 /* PigScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 601A6BFA2124AB2A00B805F8 /* PigScene.sks */; };
+		601A6BFE2124B1D800B805F8 /* PigScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601A6BFD2124B1D700B805F8 /* PigScene.swift */; };
+		601A6C022124B70C00B805F8 /* pigHappy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 601A6BFF2124B70C00B805F8 /* pigHappy.mp3 */; };
+		601A6C032124B70C00B805F8 /* pigAngry.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 601A6C002124B70C00B805F8 /* pigAngry.mp3 */; };
+		601A6C042124B70C00B805F8 /* pigScared.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 601A6C012124B70C00B805F8 /* pigScared.mp3 */; };
 		71F8CF60212496C900F8CDF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF5F212496C900F8CDF7 /* AppDelegate.swift */; };
 		71F8CF62212496C900F8CDF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF61212496C900F8CDF7 /* ViewController.swift */; };
 		71F8CF65212496C900F8CDF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F8CF63212496C900F8CDF7 /* Main.storyboard */; };
@@ -35,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		601A6BF62124A9AB00B805F8 /* PigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigViewController.swift; sourceTree = "<group>"; };
+		601A6BF82124AA2B00B805F8 /* PigStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PigStoryBoard.storyboard; sourceTree = "<group>"; };
+		601A6BFA2124AB2A00B805F8 /* PigScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PigScene.sks; sourceTree = "<group>"; };
+		601A6BFD2124B1D700B805F8 /* PigScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigScene.swift; sourceTree = "<group>"; };
+		601A6BFF2124B70C00B805F8 /* pigHappy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pigHappy.mp3; sourceTree = "<group>"; };
+		601A6C002124B70C00B805F8 /* pigAngry.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pigAngry.mp3; sourceTree = "<group>"; };
+		601A6C012124B70C00B805F8 /* pigScared.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pigScared.mp3; sourceTree = "<group>"; };
 		71F8CF5C212496C900F8CDF7 /* MultiUseless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiUseless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F8CF5F212496C900F8CDF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71F8CF61212496C900F8CDF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,9 +90,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		601A6BF52124A94A00B805F8 /* iPig */ = {
+			isa = PBXGroup;
+			children = (
+				601A6BFC2124ADA000B805F8 /* PigSounds */,
+				601A6BF62124A9AB00B805F8 /* PigViewController.swift */,
+				601A6BF82124AA2B00B805F8 /* PigStoryBoard.storyboard */,
+				601A6BFA2124AB2A00B805F8 /* PigScene.sks */,
+				601A6BFD2124B1D700B805F8 /* PigScene.swift */,
+			);
+			path = iPig;
+			sourceTree = "<group>";
+		};
+		601A6BFC2124ADA000B805F8 /* PigSounds */ = {
+			isa = PBXGroup;
+			children = (
+				601A6C002124B70C00B805F8 /* pigAngry.mp3 */,
+				601A6BFF2124B70C00B805F8 /* pigHappy.mp3 */,
+				601A6C012124B70C00B805F8 /* pigScared.mp3 */,
+			);
+			path = PigSounds;
+			sourceTree = "<group>";
+		};
 		71F8CF53212496C900F8CDF7 = {
 			isa = PBXGroup;
 			children = (
+				601A6BF52124A94A00B805F8 /* iPig */,
 				71F8CF5E212496C900F8CDF7 /* MultiUseless */,
 				71F8CF76212496CB00F8CDF7 /* MultiUselessTests */,
 				71F8CF81212496CB00F8CDF7 /* MultiUselessUITests */,
@@ -190,6 +227,10 @@
 		71F8CF54212496C900F8CDF7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+				);
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Stefan V. de Moraes";
@@ -232,7 +273,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601A6C032124B70C00B805F8 /* pigAngry.mp3 in Resources */,
+				601A6C022124B70C00B805F8 /* pigHappy.mp3 in Resources */,
+				601A6BF92124AA2B00B805F8 /* PigStoryBoard.storyboard in Resources */,
 				71F8CF6D212496CB00F8CDF7 /* LaunchScreen.storyboard in Resources */,
+				601A6BFB2124AB2A00B805F8 /* PigScene.sks in Resources */,
+				601A6C042124B70C00B805F8 /* pigScared.mp3 in Resources */,
 				71F8CF6A212496CB00F8CDF7 /* Assets.xcassets in Resources */,
 				71F8CF65212496C900F8CDF7 /* Main.storyboard in Resources */,
 			);
@@ -260,7 +306,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				71F8CF68212496C900F8CDF7 /* MultiUseless.xcdatamodeld in Sources */,
+				601A6BF72124A9AB00B805F8 /* PigViewController.swift in Sources */,
 				71F8CF62212496C900F8CDF7 /* ViewController.swift in Sources */,
+				601A6BFE2124B1D800B805F8 /* PigScene.swift in Sources */,
 				71F8CF60212496C900F8CDF7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,7 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CUPVNHUL72;
+				DEVELOPMENT_TEAM = KNQUVW98YZ;
 				INFOPLIST_FILE = MultiUseless/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,7 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CUPVNHUL72;
+				DEVELOPMENT_TEAM = KNQUVW98YZ;
 				INFOPLIST_FILE = MultiUseless/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
