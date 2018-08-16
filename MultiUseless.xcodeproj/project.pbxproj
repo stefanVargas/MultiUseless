@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600076BC21261A36005274C5 /* pig_inicio.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 600076BB21261A36005274C5 /* pig_inicio.atlas */; };
+		600076BE21261A50005274C5 /* pig_feliz.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 600076BD21261A50005274C5 /* pig_feliz.atlas */; };
 		601A6BF72124A9AB00B805F8 /* PigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601A6BF62124A9AB00B805F8 /* PigViewController.swift */; };
 		601A6BF92124AA2B00B805F8 /* PigStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601A6BF82124AA2B00B805F8 /* PigStoryBoard.storyboard */; };
 		601A6BFB2124AB2A00B805F8 /* PigScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 601A6BFA2124AB2A00B805F8 /* PigScene.sks */; };
@@ -14,6 +16,10 @@
 		601A6C022124B70C00B805F8 /* pigHappy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 601A6BFF2124B70C00B805F8 /* pigHappy.mp3 */; };
 		601A6C032124B70C00B805F8 /* pigAngry.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 601A6C002124B70C00B805F8 /* pigAngry.mp3 */; };
 		601A6C042124B70C00B805F8 /* pigScared.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 601A6C012124B70C00B805F8 /* pigScared.mp3 */; };
+		60F8EFDC21260F0D005BAF60 /* dinoDead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 60F8EFD821260F0D005BAF60 /* dinoDead.atlas */; };
+		60F8EFDD21260F0D005BAF60 /* dinoJump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 60F8EFD921260F0D005BAF60 /* dinoJump.atlas */; };
+		60F8EFDE21260F0D005BAF60 /* dinoRun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 60F8EFDA21260F0D005BAF60 /* dinoRun.atlas */; };
+		60F8EFDF21260F0D005BAF60 /* dinoWalk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 60F8EFDB21260F0D005BAF60 /* dinoWalk.atlas */; };
 		71F8CF60212496C900F8CDF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF5F212496C900F8CDF7 /* AppDelegate.swift */; };
 		71F8CF62212496C900F8CDF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF61212496C900F8CDF7 /* ViewController.swift */; };
 		71F8CF65212496C900F8CDF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F8CF63212496C900F8CDF7 /* Main.storyboard */; };
@@ -42,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		600076BB21261A36005274C5 /* pig_inicio.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pig_inicio.atlas; sourceTree = "<group>"; };
+		600076BD21261A50005274C5 /* pig_feliz.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pig_feliz.atlas; sourceTree = "<group>"; };
 		601A6BF62124A9AB00B805F8 /* PigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigViewController.swift; sourceTree = "<group>"; };
 		601A6BF82124AA2B00B805F8 /* PigStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PigStoryBoard.storyboard; sourceTree = "<group>"; };
 		601A6BFA2124AB2A00B805F8 /* PigScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PigScene.sks; sourceTree = "<group>"; };
@@ -49,6 +57,10 @@
 		601A6BFF2124B70C00B805F8 /* pigHappy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pigHappy.mp3; sourceTree = "<group>"; };
 		601A6C002124B70C00B805F8 /* pigAngry.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pigAngry.mp3; sourceTree = "<group>"; };
 		601A6C012124B70C00B805F8 /* pigScared.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pigScared.mp3; sourceTree = "<group>"; };
+		60F8EFD821260F0D005BAF60 /* dinoDead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = dinoDead.atlas; sourceTree = "<group>"; };
+		60F8EFD921260F0D005BAF60 /* dinoJump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = dinoJump.atlas; sourceTree = "<group>"; };
+		60F8EFDA21260F0D005BAF60 /* dinoRun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = dinoRun.atlas; sourceTree = "<group>"; };
+		60F8EFDB21260F0D005BAF60 /* dinoWalk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = dinoWalk.atlas; sourceTree = "<group>"; };
 		71F8CF5C212496C900F8CDF7 /* MultiUseless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiUseless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F8CF5F212496C900F8CDF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71F8CF61212496C900F8CDF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +105,12 @@
 		601A6BF52124A94A00B805F8 /* iPig */ = {
 			isa = PBXGroup;
 			children = (
+				600076BD21261A50005274C5 /* pig_feliz.atlas */,
+				600076BB21261A36005274C5 /* pig_inicio.atlas */,
+				60F8EFD821260F0D005BAF60 /* dinoDead.atlas */,
+				60F8EFD921260F0D005BAF60 /* dinoJump.atlas */,
+				60F8EFDA21260F0D005BAF60 /* dinoRun.atlas */,
+				60F8EFDB21260F0D005BAF60 /* dinoWalk.atlas */,
 				601A6BFC2124ADA000B805F8 /* PigSounds */,
 				601A6BF62124A9AB00B805F8 /* PigViewController.swift */,
 				601A6BF82124AA2B00B805F8 /* PigStoryBoard.storyboard */,
@@ -273,14 +291,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60F8EFDF21260F0D005BAF60 /* dinoWalk.atlas in Resources */,
 				601A6C032124B70C00B805F8 /* pigAngry.mp3 in Resources */,
 				601A6C022124B70C00B805F8 /* pigHappy.mp3 in Resources */,
 				601A6BF92124AA2B00B805F8 /* PigStoryBoard.storyboard in Resources */,
+				60F8EFDE21260F0D005BAF60 /* dinoRun.atlas in Resources */,
+				600076BE21261A50005274C5 /* pig_feliz.atlas in Resources */,
 				71F8CF6D212496CB00F8CDF7 /* LaunchScreen.storyboard in Resources */,
 				601A6BFB2124AB2A00B805F8 /* PigScene.sks in Resources */,
 				601A6C042124B70C00B805F8 /* pigScared.mp3 in Resources */,
 				71F8CF6A212496CB00F8CDF7 /* Assets.xcassets in Resources */,
+				600076BC21261A36005274C5 /* pig_inicio.atlas in Resources */,
+				60F8EFDD21260F0D005BAF60 /* dinoJump.atlas in Resources */,
 				71F8CF65212496C900F8CDF7 /* Main.storyboard in Resources */,
+				60F8EFDC21260F0D005BAF60 /* dinoDead.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
