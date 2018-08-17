@@ -20,24 +20,30 @@ class PigScene: SKScene {
     let angrySound = SKAction.playSoundFileNamed("pigAngry", waitForCompletion: false)
     let happySound = SKAction.playSoundFileNamed("pigHappy", waitForCompletion: false)
     let scaredSound = SKAction.playSoundFileNamed("pigScared", waitForCompletion: false)
+    let weeSound = SKAction.playSoundFileNamed("wee", waitForCompletion: false)
     
     //MARK: Set sprite for Pig
-    private var dino = SKSpriteNode()
-    private var dinoWalkingFrame: [SKTexture] = []
+    private var pigPosition = SKSpriteNode()
+    private var pigIdleFrame: [SKTexture] = []
     
-    private var dinoJump = SKSpriteNode()
-    private var dinoJumpFrame: [SKTexture] = []
+   // private var pigScared = SKSpriteNode()
+    private var pigScaredFrame: [SKTexture] = []
     
-    private var dinoDie = SKSpriteNode()
-    private var dinoDieFrame: [SKSpriteNode] = []
+   // private var pigHappy = SKSpriteNode()
+    private var pigHappyFrame: [SKTexture] = []
+    
+//   private var pigAngry = SKSpriteNode()
+    private var pigAngryFrame: [SKTexture] = []
+    
+  //  private var pigJump = SKSpriteNode()
+    private var pigJumpFrame: [SKTexture] = []
+    
     
     
     override func didMove(to view: SKView) {
         
-        buildAnimation(atlasName: "pig_inicio", nameOfSprites: "pig_inicio", arraySKTexture: &dinoWalkingFrame, currentNode: &dino)
-        animateDino()
-        
-        
+        pigIdle()
+    
         for node in self.children{
             if node.name == "tail"{
                 if let anyNode: SKSpriteNode = node as? SKSpriteNode {
@@ -66,41 +72,40 @@ class PigScene: SKScene {
             let location = touch.location(in: self)
             
             if tailBtn.frame.contains(location){
-                print("tail")
                 run(angrySound)
+                
+                pigPosition.removeFromParent()
+                buildAnimation(atlasName: "pig_bravo", nameOfSprites: "angry", arraySKTexture: &pigHappyFrame)
+                animatePig(pigTexture: pigHappyFrame, keyName: "pigAngry")
+                
+                 backToIdlePig(waitTime: 2.5)
+                
             }
             if bellyBtn.frame.contains(location){
-                print("belly")
                 run(happySound)
+                
+                pigPosition.removeFromParent()
+                buildAnimation(atlasName: "pig_feliz", nameOfSprites: "happy", arraySKTexture: &pigHappyFrame)
+                animatePig(pigTexture: pigHappyFrame, keyName: "pigHappy")
+                
+                 backToIdlePig(waitTime: 1.5)
                 
             }
 
             if mouthBtn.frame.contains(location){
-                print("mouth")
                 run(scaredSound)
+                
+                pigPosition.removeFromParent()
+                buildAnimation(atlasName: "pig_assustado", nameOfSprites: "scared", arraySKTexture: &pigHappyFrame)
+                animatePig(pigTexture: pigHappyFrame, keyName: "pigScared")
+                
+                backToIdlePig(waitTime: 2.5)
             }
         }
     }
-//
-//    func buildDino(atlasName: String, textureName: String){
-//        let dinoAnimatedAtlas = SKTextureAtlas(named: atlasName)
-//        var walkFrames:[SKTexture] = []
-//
-//        let numImages = dinoAnimatedAtlas.textureNames.count
-//        for i in 1...numImages{
-//            let dinoTextureName = textureName + "\(i)"
-//            walkFrames.append(dinoAnimatedAtlas.textureNamed(dinoTextureName))
-//        }
-//        dinoWalkingFrame = walkFrames
-//
-//        let firstFrameTexture = dinoWalkingFrame[0]
-//        dino = SKSpriteNode(texture: firstFrameTexture)
-//        dino.position = CGPoint(x: frame.midX, y: frame.midY)
-//        addChild(dino)
-//    }
-    
+
     //funcao para rodar os sprites
-    func buildAnimation(atlasName: String, nameOfSprites: String, arraySKTexture: inout [SKTexture], currentNode: inout SKSpriteNode){
+    func buildAnimation(atlasName: String, nameOfSprites: String, arraySKTexture: inout [SKTexture]){
         let walkAtlas = SKTextureAtlas(named: atlasName)
         var walkFrames: [SKTexture] = []
         let numImages = walkAtlas.textureNames.count
@@ -112,7 +117,6 @@ class PigScene: SKScene {
                 textureName = nameOfSprites + "\(i)"
             }
             
-            print(walkAtlas.textureNamed(textureName))
             walkFrames.append(walkAtlas.textureNamed(textureName))
         }
         
@@ -120,24 +124,74 @@ class PigScene: SKScene {
         
         //Pega a primeira img do atlas e coloca numa var de textura
         let firstFrameTexture = arraySKTexture[0]
-        currentNode = SKSpriteNode(texture: firstFrameTexture)
+        pigPosition = SKSpriteNode(texture: firstFrameTexture)
         
-        currentNode.size = CGSize(width: 600, height: 600)
-        currentNode.position = CGPoint(x: frame.midX, y: frame.midY)
-        addChild(currentNode)
+        //currentNode.size = CGSize(width: 600, height: 600)
+        pigPosition.position = CGPoint(x: frame.midX, y: frame.midY)
+        addChild(pigPosition)
     }
     
     
-    func animateDino(){
-        dino.run(SKAction.repeatForever(
-            SKAction.animate(with: dinoWalkingFrame,
-                             timePerFrame: 0.1,
+    func animatePig(pigTexture: [SKTexture], keyName: String ){
+        pigPosition.run(SKAction.repeatForever(
+            SKAction.animate(with: pigTexture,
+                             timePerFrame: 0.05,
                              resize: false,
                              restore: true)),
-                 withKey:"dinoStop")
+                 withKey:keyName)
     }
     
+    func pigJump(){
+        
+        delaySoundEffect()
+        pigPosition.removeFromParent()
+        buildAnimation(atlasName: "pig_mortal", nameOfSprites: "backflip", arraySKTexture: &pigJumpFrame)
+        animatePig(pigTexture: pigJumpFrame, keyName: "pigJump")
+        
+    }
+    
+    func pigIdle(){
+        
+        buildAnimation(atlasName: "pig_inicio", nameOfSprites: "idle", arraySKTexture: &pigIdleFrame)
+        animatePig(pigTexture: pigIdleFrame, keyName: "pigIdle")
+        
+    }
+    
+    func delaySoundEffect() {
+        
+        let otherWait = SKAction.wait(forDuration: 1.7)
+        let playSound:SKAction = SKAction.run {
+            self.run(self.weeSound)
+        }
+        
+        let waitToReset = SKAction.wait(forDuration: 1.5)
+        let idle:SKAction = SKAction.run{
+            self.pigPosition.removeFromParent()
+            self.pigIdle()
+        }
+        
+        
+        let otherSequence = SKAction.sequence([otherWait, (playSound), waitToReset, idle])
+        run(otherSequence)
+    }
+    
+    
+    func backToIdlePig(waitTime: Double){
+        let waitAnimation = SKAction.wait(forDuration: waitTime)
+        
+        let idle:SKAction = SKAction.run{
+            self.pigPosition.removeFromParent()
+            self.pigIdle()
+        }
+        
+        let otherSequence = SKAction.sequence([waitAnimation, idle])
+        run(otherSequence)
+        
+    }
 }
+
+
+
 
 
 
