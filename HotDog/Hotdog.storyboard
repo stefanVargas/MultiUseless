@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aSA-Fj-6m2">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,17 +13,60 @@
         <!--Hot Dog View Controller-->
         <scene sceneID="7lh-cU-sCb">
             <objects>
-                <viewController id="aSA-Fj-6m2" customClass="HotDogViewController" customModule="MultiUseless" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5l0-Y8-0vk" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="HDVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aSA-Fj-6m2" customClass="HotDogViewController" customModule="MultiUseless" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5l0-Y8-0vk" customClass="CanvasView" customModule="MultiUseless" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HDD_0" translatesAutoresizingMaskIntoConstraints="NO" id="YrI-HP-qFV">
+                                <rect key="frame" x="2.0820423835953079" y="14.854619058647586" width="314" height="540.00000000000023"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.61565778370000002" blue="0.2423514675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgk-3f-RwK">
+                                <rect key="frame" x="96" y="95" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="KetChup"/>
+                                <connections>
+                                    <action selector="ketchup:" destination="aSA-Fj-6m2" eventType="touchUpInside" id="90O-ih-6by"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ook-Xu-bmK">
+                                <rect key="frame" x="98" y="133" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mostard"/>
+                                <connections>
+                                    <action selector="mostard:" destination="aSA-Fj-6m2" eventType="touchUpInside" id="mxU-PG-xHP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG6-wT-Lmq">
+                                <rect key="frame" x="164" y="118" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clean"/>
+                                <connections>
+                                    <action selector="clearCanvas:" destination="aSA-Fj-6m2" eventType="touchUpInside" id="7eY-zC-3iJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.87450980389999999" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="9Tp-Ft-4Ok"/>
+                        <connections>
+                            <outlet property="doguito" destination="YrI-HP-qFV" id="1UD-b0-JK9"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="canvas" destination="5l0-Y8-0vk" id="no1-5N-tEw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sL-1f-ckr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-878" y="-106"/>
+            <point key="canvasLocation" x="-879.375" y="-106.69014084507042"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HDD_0" width="750" height="1334"/>
+    </resources>
 </document>

@@ -16,6 +16,7 @@ class HotDogScene: SKScene {
     var activeSlice: SKShapeNode!
     var activeSlicePoints = [CGPoint]()
     var definitiveActiveSlicePoints = [CGPoint]()
+    var isDrawing: Bool = false
     
     override func didMove(to view: SKView) {
         createSlices()
@@ -23,52 +24,51 @@ class HotDogScene: SKScene {
     
     func createSlices() {
         activeSlice = SKShapeNode()
-        activeSlice.strokeColor = UIColor(red: 1, green: 0.9, blue: 2, alpha: 1)
-        activeSlice.lineWidth = 9
+        activeSlice.strokeColor = UIColor(red: 1, green: 0.2, blue: 0, alpha: 1)
+        activeSlice.lineWidth = 25
         addChild(activeSlice)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        var tempActiveSlicePoints = [CGPoint]()
         if let touch = touches.first {
+            
             let location = touch.location(in: self)
-            tempActiveSlicePoints.append(location)
-            redrawActiveSlice(pointList: tempActiveSlicePoints)
+            activeSlicePoints.append(location)
+            redrawActiveSlice(pointList: activeSlicePoints)
         }
-        for point in tempActiveSlicePoints{
-            activeSlicePoints.append(point)
+        for point in activeSlicePoints{
             definitiveActiveSlicePoints.append(point)
         }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
-        
-        var tempActiveSlicePoints = [CGPoint]()
+        isDrawing = true
         let location = touch.location(in: self)
-        tempActiveSlicePoints.append(location)
-        redrawActiveSlice(pointList: tempActiveSlicePoints)
+        activeSlicePoints.append(location)
+        redrawActiveSlice(pointList: activeSlicePoints)
         
-        for point in tempActiveSlicePoints{
-            activeSlicePoints.append(point)
+        for point in activeSlicePoints{
+            
             definitiveActiveSlicePoints.append(point)
         }
         
     }
     
     override func touchesEnded(_ touches: Set<UITouch>?, with event: UIEvent?) {
-        
+        isDrawing = false
     }
     
     func redrawActiveSlice(pointList: [CGPoint]) {
-        let path = UIBezierPath()
-        path.move(to: pointList[0])
-        for i in 1 ..< pointList.count {
-            path.addLine(to: pointList[i])
+        if isDrawing {
+            let path = UIBezierPath()
+            path.move(to: pointList.first!)
+            for i in 1 ..< pointList.count {
+                path.addLine(to: pointList[i])
+            }
+            activeSlice.path = path.cgPath
         }
-        activeSlice.path = path.cgPath
-
     }
 
 }

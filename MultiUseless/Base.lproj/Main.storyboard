@@ -32,7 +32,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="HotDog"/>
                                 <connections>
-                                    <segue destination="XJe-vC-Gqb" kind="show" id="tut-2Q-Vee"/>
+                                    <segue destination="XJe-vC-Gqb" kind="show" identifier="toHotDog_segue" id="tut-2Q-Vee"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="669.60000000000002" y="33.733133433283363"/>
         </scene>
-        <!--Hotdog-->
+        <!--HDVC-->
         <scene sceneID="GBP-5I-Gl2">
             <objects>
-                <viewControllerPlaceholder storyboardName="Hotdog" id="XJe-vC-Gqb" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Hotdog" referencedIdentifier="HDVC" id="XJe-vC-Gqb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHL-cK-ZNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1154" y="-195"/>
