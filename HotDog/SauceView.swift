@@ -15,7 +15,6 @@ class SauceView: UIView {
         self.clipsToBounds = true
         self.isMultipleTouchEnabled = false
         self.layer.borderWidth = 20
-        self.layer.masksToBounds = true
     }
  
     /*

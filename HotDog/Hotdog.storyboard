@@ -14,24 +14,31 @@
         <scene sceneID="7lh-cU-sCb">
             <objects>
                 <viewController storyboardIdentifier="HDVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aSA-Fj-6m2" customClass="HotDogViewController" customModule="MultiUseless" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5l0-Y8-0vk" customClass="CanvasView" customModule="MultiUseless" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="5l0-Y8-0vk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HDD_0" translatesAutoresizingMaskIntoConstraints="NO" id="YrI-HP-qFV">
-                                <rect key="frame" x="2.0820423835953079" y="14.854619058647586" width="314" height="540.00000000000023"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="3" y="13" width="313.99999999999994" height="540.00000000000034"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <color key="tintColor" red="1" green="0.61565778370000002" blue="0.2423514675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5n-8r-FXa" customClass="CanvasView" customModule="MultiUseless" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="538"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="doguito" destination="YrI-HP-qFV" id="iUR-un-xxY"/>
+                                </connections>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgk-3f-RwK">
                                 <rect key="frame" x="96" y="95" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="KetChup"/>
                                 <connections>
-                                    <action selector="ketchup:" destination="aSA-Fj-6m2" eventType="touchUpInside" id="90O-ih-6by"/>
+                                    <action selector="ketchup:" destination="aSA-Fj-6m2" eventType="touchUpInside" id="gxa-2I-xPg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ook-Xu-bmK">
@@ -39,7 +46,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Mostard"/>
                                 <connections>
-                                    <action selector="mostard:" destination="aSA-Fj-6m2" eventType="touchUpInside" id="mxU-PG-xHP"/>
+                                    <action selector="mostard:" destination="aSA-Fj-6m2" eventType="touchUpInside" id="4fA-tP-wMU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG6-wT-Lmq">
@@ -47,18 +54,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clean"/>
                                 <connections>
-                                    <action selector="clearCanvas:" destination="aSA-Fj-6m2" eventType="touchUpInside" id="7eY-zC-3iJ"/>
+                                    <action selector="clearCanvas:" destination="aSA-Fj-6m2" eventType="touchUpInside" id="88s-5h-W6p"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.87450980389999999" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="a5n-8r-FXa" firstAttribute="trailing" secondItem="9Tp-Ft-4Ok" secondAttribute="trailing" id="P1s-WS-wTk"/>
+                            <constraint firstItem="a5n-8r-FXa" firstAttribute="leading" secondItem="9Tp-Ft-4Ok" secondAttribute="leading" id="XNs-TL-ZKK"/>
+                            <constraint firstItem="a5n-8r-FXa" firstAttribute="bottom" secondItem="9Tp-Ft-4Ok" secondAttribute="bottom" constant="-30" id="ee7-k3-Kbf"/>
+                            <constraint firstItem="a5n-8r-FXa" firstAttribute="top" secondItem="5l0-Y8-0vk" secondAttribute="top" id="hbx-vD-2z6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9Tp-Ft-4Ok"/>
-                        <connections>
-                            <outlet property="doguito" destination="YrI-HP-qFV" id="1UD-b0-JK9"/>
-                        </connections>
                     </view>
                     <connections>
-                        <outlet property="canvas" destination="5l0-Y8-0vk" id="no1-5N-tEw"/>
+                        <outlet property="canvas" destination="a5n-8r-FXa" id="jz7-UN-5ek"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sL-1f-ckr" userLabel="First Responder" sceneMemberID="firstResponder"/>

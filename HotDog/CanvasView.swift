@@ -22,37 +22,32 @@ class CanvasView: UIView {
     var isKetchup: Bool = true
     var isDancing: Bool = false
     
-    var sauceView = SauceView.init(frame: CGRect(x: 115, y: 285, width: 88, height: 105))
+    var sauceView = CGRect(x: 115, y: 285, width: 88, height: 105)
     
-    //var musicPath = Bundle.main.path(forResource: "dance", ofType: "mp3")!
-    var danceMusic: URL! //=  URL(fileURLWithPath: Bundle.main.path(forResource: "dance.mp3", ofType: "m4a")!)
-
-    //NSURL(fileURLWithPath: Bundle.main.path(forResource: "dance", ofType: "mp3")!)
-    var audioPlayer = AVAudioPlayer()
-    
-    var viewController: HotDogViewController!
+    var audioPlayer: AVAudioPlayer?
     
     @IBOutlet weak var doguito: UIImageView!
+    
     var hotDogTriste = [UIImage]()
     var hotDogDance = [UIImage]()
+    
     
     override func layoutSubviews() {
         self.clipsToBounds = true
         self.isMultipleTouchEnabled = false
-        self.layer.masksToBounds = true
         
         lineClear = UIColor.clear
         lineSauce = initalSauce()
-        lineWidth = 9
+        lineWidth = 10
+    
     }
     
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.doguito.image = UIImage(named: "HDS_0")
         let touch = touches.first
         startingPoint = touch?.location(in: self)
-        if sauceView.frame.contains((touch?.location(in: self))!){
-            //self.doguito.image = UIImage.animatedImage(with: hotDogTriste, duration: 2.5)
-        }
+        isDancing = false
+        playMusic()
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -66,7 +61,7 @@ class CanvasView: UIView {
         path.addLine(to: touchPoint)
         startingPoint = touchPoint
         drawShapeLayer(color: lineClear)
-        if sauceView.frame.contains(startingPoint){
+        if sauceView.contains(startingPoint){
             drawShapeLayer(color: lineSauce)
             self.doguito.image = UIImage.animatedImage(with: hotDogTriste, duration: 2.5)
         }
@@ -81,10 +76,11 @@ class CanvasView: UIView {
             isDancing = true
             
         } else if motion == .motionShake && isDancing {
-            audioPlayer.stop()
             self.doguito.image = UIImage(named: "HDS_0")
             isDancing = false
         }
+        
+        playMusic()
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -105,12 +101,11 @@ class CanvasView: UIView {
     func drawShapeLayer(color: UIColor){
         
         let shapeLayer = CAShapeLayer()
-        path.lineJoinStyle = .round
-        path.lineCapStyle = .butt
+
         shapeLayer.path = path.cgPath
         shapeLayer.strokeColor = color.cgColor
         shapeLayer.lineCap = "round"
-        shapeLayer.lineJoin = "round"
+        //shapeLayer.lineJoin = "round"
         shapeLayer.lineWidth = lineWidth
         shapeLayer.fillColor = UIColor.clear.cgColor
         self.layer.addSublayer(shapeLayer)
@@ -145,6 +140,25 @@ class CanvasView: UIView {
         lineSauce = UIColor(displayP3Red: 1, green: 0.3, blue: 0.2, alpha: 0.65)
         return lineSauce!
 
+    }
+    
+    func playMusic() {
+        
+        if isDancing{
+            let path = Bundle.main.path(forResource: "music.wav", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                self.audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.play()
+            } catch {
+                // couldn't load file :(
+            }
+        }
+        else{
+            self.audioPlayer?.stop()
+        }
+        
     }
     
     func populateAnimationImages(format: String) -> [UIImage] {

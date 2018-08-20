@@ -13,58 +13,26 @@ class HotDogViewController: UIViewController {
 
     @IBOutlet weak var canvas: CanvasView!
     var danceMusic: URL!
-    var audioPlayer = AVAudioPlayer()
+    var audioPlayer: AVAudioPlayer?
     var isPlaying: Bool = false
-    let path = Bundle.main.path(forResource: "dance", ofType: "mp3", inDirectory: "HotDogAssets.xcassets")
 
- 
-
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
-        canvas.viewController = self
-
-        danceMusic = URL(fileURLWithPath: path!)//(forResource: "dance", ofType: "mp3")!)
+  
+        
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        do{
-            self.audioPlayer = try AVAudioPlayer(contentsOf: danceMusic)
-            self.audioPlayer.prepareToPlay()
-        } catch {
-            print("ERROR")
-        }
         
     }
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        if !isPlaying{
-            audioPlayer.play()
-            isPlaying = true
-        } else {
-            isPlaying = false
-            audioPlayer.stop()
-        }
+        canvas.motionBegan(motion, with: event)
     }
-
-//        if let view = self.view as! SKView? {
-//            // Load the SKScene from 'GameScene.sks'
-//            if let scene = SKScene(fileNamed: "HotDogScene") {
-//                // Set the scale mode to scale to fit the window
-//                scene.scaleMode = .aspectFill
-//
-//                // Present the scene
-//                view.presentScene(scene)
-//            }
-//
-//            view.ignoresSiblingOrder = true
-//
-//            view.showsFPS = true
-//            view.showsNodeCount = true
-//        }
-    
- 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

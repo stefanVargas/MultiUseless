@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		710A2BD321273F61004EFF13 /* SauceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A2BD221273F61004EFF13 /* SauceView.swift */; };
+		71557DC621291FD000E10B8C /* music.wav in Resources */ = {isa = PBXBuildFile; fileRef = 71557DC521291FD000E10B8C /* music.wav */; };
+		71557DC8212B162600E10B8C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71557DC7212B162600E10B8C /* PageViewController.swift */; };
 		71F8CF60212496C900F8CDF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF5F212496C900F8CDF7 /* AppDelegate.swift */; };
 		71F8CF62212496C900F8CDF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF61212496C900F8CDF7 /* ViewController.swift */; };
 		71F8CF65212496C900F8CDF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F8CF63212496C900F8CDF7 /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		710A2BD221273F61004EFF13 /* SauceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SauceView.swift; sourceTree = "<group>"; };
+		71557DC521291FD000E10B8C /* music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = music.wav; path = ../../../Downloads/music.wav; sourceTree = "<group>"; };
+		71557DC7212B162600E10B8C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		71F8CF5C212496C900F8CDF7 /* MultiUseless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiUseless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F8CF5F212496C900F8CDF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71F8CF61212496C900F8CDF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 				71F8CF6B212496CB00F8CDF7 /* LaunchScreen.storyboard */,
 				71F8CF6E212496CB00F8CDF7 /* Info.plist */,
 				71F8CF66212496C900F8CDF7 /* MultiUseless.xcdatamodeld */,
+				71557DC7212B162600E10B8C /* PageViewController.swift */,
 			);
 			path = MultiUseless;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				71F8CFD72124AF6000F8CDF7 /* HotDogScene.swift */,
 				71F8CFD92125ED9900F8CDF7 /* CanvasView.swift */,
 				71F8CFDB21260E9F00F8CDF7 /* HotDogAssets.xcassets */,
+				71557DC521291FD000E10B8C /* music.wav */,
 				710A2BD221273F61004EFF13 /* SauceView.swift */,
 			);
 			path = HotDog;
@@ -267,6 +273,7 @@
 				71F8CF962124ACE300F8CDF7 /* HotDogScene.sks in Resources */,
 				71F8CF6A212496CB00F8CDF7 /* Assets.xcassets in Resources */,
 				71F8CF65212496C900F8CDF7 /* Main.storyboard in Resources */,
+				71557DC621291FD000E10B8C /* music.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +305,7 @@
 				71F8CF942124AC4C00F8CDF7 /* HotDogViewController.swift in Sources */,
 				71F8CF62212496C900F8CDF7 /* ViewController.swift in Sources */,
 				71F8CF60212496C900F8CDF7 /* AppDelegate.swift in Sources */,
+				71557DC8212B162600E10B8C /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
