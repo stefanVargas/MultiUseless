@@ -7,21 +7,21 @@
 //
 
 import SpriteKit
+import AVFoundation
 
 class PigViewController: UIViewController {
+    
+    var audioPlay = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        playSound()
         
         if let view = self.view as! SKView?{
             if let scene = SKScene(fileNamed: "PigScene"){
                 scene.scaleMode = .aspectFill
                 view.presentScene(scene)
             }
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
-            view.showsPhysics = true
             
         }
       
@@ -35,7 +35,17 @@ class PigViewController: UIViewController {
             
         }
     }
-
+    
+    func playSound(){
+        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "pig_backsound", ofType: "mp3")!)
+        audioPlay = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
+        audioPlay.prepareToPlay()
+        audioPlay.numberOfLoops = -1
+        audioPlay.play()
+        audioPlay.volume = 0.1
+    }
+    
+    
     
 
 }

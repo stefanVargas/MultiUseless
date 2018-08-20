@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60092389212B349A004EE4D1 /* pig_fundoAnimado.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 60092388212B349A004EE4D1 /* pig_fundoAnimado.atlas */; };
+		6009238B212B53D1004EE4D1 /* pig_backsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6009238A212B53D1004EE4D1 /* pig_backsound.mp3 */; };
 		601A6BF72124A9AB00B805F8 /* PigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601A6BF62124A9AB00B805F8 /* PigViewController.swift */; };
 		601A6BF92124AA2B00B805F8 /* PigStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601A6BF82124AA2B00B805F8 /* PigStoryBoard.storyboard */; };
 		601A6BFB2124AB2A00B805F8 /* PigScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 601A6BFA2124AB2A00B805F8 /* PigScene.sks */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60092388212B349A004EE4D1 /* pig_fundoAnimado.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pig_fundoAnimado.atlas; sourceTree = "<group>"; };
+		6009238A212B53D1004EE4D1 /* pig_backsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pig_backsound.mp3; sourceTree = "<group>"; };
 		601A6BF62124A9AB00B805F8 /* PigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigViewController.swift; sourceTree = "<group>"; };
 		601A6BF82124AA2B00B805F8 /* PigStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PigStoryBoard.storyboard; sourceTree = "<group>"; };
 		601A6BFA2124AB2A00B805F8 /* PigScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PigScene.sks; sourceTree = "<group>"; };
@@ -105,6 +109,12 @@
 		601A6BF52124A94A00B805F8 /* iPig */ = {
 			isa = PBXGroup;
 			children = (
+				60092388212B349A004EE4D1 /* pig_fundoAnimado.atlas */,
+				6044F49F212753EA00D0B374 /* pig_mortal.atlas */,
+				6044F49D212753E300D0B374 /* pig_bravo.atlas */,
+				6044F49921273F2400D0B374 /* pig_assustado.atlas */,
+				6044F49721273F2400D0B374 /* pig_feliz.atlas */,
+				6044F49821273F2400D0B374 /* pig_inicio.atlas */,
 				601A6BFC2124ADA000B805F8 /* PigSounds */,
 				601A6BF62124A9AB00B805F8 /* PigViewController.swift */,
 				601A6BF82124AA2B00B805F8 /* PigStoryBoard.storyboard */,
@@ -117,11 +127,7 @@
 		601A6BFC2124ADA000B805F8 /* PigSounds */ = {
 			isa = PBXGroup;
 			children = (
-				6044F49F212753EA00D0B374 /* pig_mortal.atlas */,
-				6044F49D212753E300D0B374 /* pig_bravo.atlas */,
-				6044F49921273F2400D0B374 /* pig_assustado.atlas */,
-				6044F49721273F2400D0B374 /* pig_feliz.atlas */,
-				6044F49821273F2400D0B374 /* pig_inicio.atlas */,
+				6009238A212B53D1004EE4D1 /* pig_backsound.mp3 */,
 				601A6C002124B70C00B805F8 /* pigAngry.mp3 */,
 				601A6BFF2124B70C00B805F8 /* pigHappy.mp3 */,
 				604F9C672127606500500110 /* wee.wav */,
@@ -291,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60092389212B349A004EE4D1 /* pig_fundoAnimado.atlas in Resources */,
 				601A6C032124B70C00B805F8 /* pigAngry.mp3 in Resources */,
 				6044F49B21273F2400D0B374 /* pig_inicio.atlas in Resources */,
 				601A6C022124B70C00B805F8 /* pigHappy.mp3 in Resources */,
@@ -298,6 +305,7 @@
 				6044F4A0212753EA00D0B374 /* pig_mortal.atlas in Resources */,
 				71F8CF6D212496CB00F8CDF7 /* LaunchScreen.storyboard in Resources */,
 				6044F49C21273F2400D0B374 /* pig_assustado.atlas in Resources */,
+				6009238B212B53D1004EE4D1 /* pig_backsound.mp3 in Resources */,
 				601A6BFB2124AB2A00B805F8 /* PigScene.sks in Resources */,
 				604F9C682127606500500110 /* wee.wav in Resources */,
 				601A6C042124B70C00B805F8 /* pigScared.mp3 in Resources */,
