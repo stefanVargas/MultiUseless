@@ -28,6 +28,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         return subViewControllers[currentIndex - 1]
     }
     
+    
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let currentIndex: Int = subViewControllers.index(of: viewController) ?? 0
         
@@ -44,9 +46,12 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         self.dataSource = self
         // Do any additional setup after loading the view.
         setViewControllers([subViewControllers[0]], direction: .forward, animated: true, completion: nil)
+        
     }
+    
+    
     required init?(coder: NSCoder) {
-        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        super.init(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,16 +12,22 @@ import AVFoundation
 class HotDogViewController: UIViewController {
 
     @IBOutlet weak var canvas: CanvasView!
+    
+    @IBOutlet weak var nuvem: UIImageView!
+    
     var danceMusic: URL!
     var audioPlayer: AVAudioPlayer?
     var isPlaying: Bool = false
+    var nuvemImages = [UIImage]()
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-  
+        self.nuvemImages.removeAll()
+        self.nuvemImages = populateAnimationImages(format: "HDNuvem_", numDeImages: 249)
+        nuvem.image = UIImage.animatedImage(with: nuvemImages, duration: 10.05)
         
     }
     
@@ -52,6 +58,18 @@ class HotDogViewController: UIViewController {
     @IBAction func clearCanvas(_ sender: UIButton) {
         canvas.clearCanvas()
     }
+    
+    func populateAnimationImages(format: String, numDeImages: Int) -> [UIImage] {
+        
+        var imagesArray = [UIImage]()
+        
+        for index in 0 ..< numDeImages {
+            imagesArray.append( UIImage(named: format + "\(index)")!)
+        }
+        
+        return imagesArray
+    }
+    
     /*
     // MARK: - Navigation
 

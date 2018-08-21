@@ -19,14 +19,17 @@ class CanvasView: UIView {
     var touchPoint: CGPoint!
     var startingPoint: CGPoint!
     
+    let animation = UIImage()
+    
     var isKetchup: Bool = true
     var isDancing: Bool = false
-    
-    var sauceView = CGRect(x: 115, y: 285, width: 88, height: 105)
     
     var audioPlayer: AVAudioPlayer?
     
     @IBOutlet weak var doguito: UIImageView!
+    
+    var sauceView = CGRect()
+
     
     var hotDogTriste = [UIImage]()
     var hotDogDance = [UIImage]()
@@ -35,6 +38,7 @@ class CanvasView: UIView {
     override func layoutSubviews() {
         self.clipsToBounds = true
         self.isMultipleTouchEnabled = false
+        sauceView = doguito.frame.insetBy(dx: 155, dy: 185).intersection(doguito.frame.offsetBy(dx: 155, dy: 340))
         
         lineClear = UIColor.clear
         lineSauce = initalSauce()
@@ -51,7 +55,7 @@ class CanvasView: UIView {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.hotDogTriste = populateAnimationImages(format: "HDS_")
+        self.hotDogTriste = populateAnimationImages(format: "HDS_", numDeImages: 19)
        
         let touch = touches.first
         touchPoint = touch?.location(in: self)
@@ -71,8 +75,8 @@ class CanvasView: UIView {
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         
         if motion == .motionShake && !isDancing{
-            self.hotDogDance = populateAnimationImages(format: "HDD_")
-            self.doguito.image = UIImage.animatedImage(with: hotDogDance, duration: 1.2)
+            self.hotDogDance = populateAnimationImages(format: "HDD_", numDeImages: 27)
+            self.doguito.image = UIImage.animatedImage(with: hotDogDance, duration: 0.85)
             isDancing = true
             
         } else if motion == .motionShake && isDancing {
@@ -114,9 +118,11 @@ class CanvasView: UIView {
     
     
     func clearCanvas()  {
+        path.addLine(to: CGPoint(x: 1, y: 1))
         path.removeAllPoints()
         self.layer.sublayers = nil
         self.setNeedsDisplay()
+        playMusic()
 
     }
     
@@ -145,27 +151,28 @@ class CanvasView: UIView {
     func playMusic() {
         
         if isDancing{
-            let path = Bundle.main.path(forResource: "music.wav", ofType:nil)!
+            let path = Bundle.main.path(forResource: "dance.mp3", ofType:nil)!
             let url = URL(fileURLWithPath: path)
             
             do {
                 self.audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.numberOfLoops = 9
                 audioPlayer?.play()
             } catch {
                 // couldn't load file :(
             }
         }
-        else{
+        else if !isDancing {
             self.audioPlayer?.stop()
         }
         
     }
     
-    func populateAnimationImages(format: String) -> [UIImage] {
+    func populateAnimationImages(format: String, numDeImages: Int) -> [UIImage] {
         
         var imagesArray = [UIImage]()
         
-        for index in 0 ..< 19 {
+        for index in 0 ..< numDeImages {
             imagesArray.append( UIImage(named: format + "\(index)")!)
         }
         

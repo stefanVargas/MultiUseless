@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aSA-Fj-6m2">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,70 +15,119 @@
         <!--Hot Dog View Controller-->
         <scene sceneID="7lh-cU-sCb">
             <objects>
-                <viewController storyboardIdentifier="HDVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aSA-Fj-6m2" customClass="HotDogViewController" customModule="MultiUseless" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HDVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aSA-Fj-6m2" customClass="HotDogViewController" customModule="MultiUseless" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5l0-Y8-0vk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HDD_0" translatesAutoresizingMaskIntoConstraints="NO" id="YrI-HP-qFV">
-                                <rect key="frame" x="3" y="13" width="313.99999999999994" height="540.00000000000034"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cachorroquente_fundo" translatesAutoresizingMaskIntoConstraints="NO" id="W7n-2x-R92">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="tintColor" red="1" green="0.61565778370000002" blue="0.2423514675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HDNuvem_0" translatesAutoresizingMaskIntoConstraints="NO" id="JLZ-Vj-3rE" userLabel="nuvem">
+                                <rect key="frame" x="2" y="0.0" width="371" height="667"/>
+                                <color key="tintColor" red="1" green="0.61565778370000002" blue="0.2423514675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HDD_0" translatesAutoresizingMaskIntoConstraints="NO" id="YrI-HP-qFV">
+                                <rect key="frame" x="3" y="35" width="369" height="627"/>
                                 <color key="tintColor" red="1" green="0.61565778370000002" blue="0.2423514675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5n-8r-FXa" customClass="CanvasView" customModule="MultiUseless" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="538"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="637"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="doguito" destination="YrI-HP-qFV" id="iUR-un-xxY"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgk-3f-RwK">
-                                <rect key="frame" x="96" y="95" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="KetChup"/>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="25" placeholderIntrinsicHeight="75" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgk-3f-RwK">
+                                <rect key="frame" x="50" y="561.5" width="25" height="75.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="SB7-ff-EFl"/>
+                                    <constraint firstAttribute="width" secondItem="Jgk-3f-RwK" secondAttribute="height" multiplier="1:3" id="j1e-HG-B8h"/>
+                                </constraints>
+                                <state key="normal" image="ketchup"/>
                                 <connections>
                                     <action selector="ketchup:" destination="aSA-Fj-6m2" eventType="touchUpInside" id="gxa-2I-xPg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ook-Xu-bmK">
-                                <rect key="frame" x="98" y="133" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mostard"/>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ook-Xu-bmK">
+                                <rect key="frame" x="112" y="561.5" width="25.5" height="75.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="UM9-mF-P9H"/>
+                                    <constraint firstAttribute="width" secondItem="ook-Xu-bmK" secondAttribute="height" multiplier="1:3" id="ov9-WK-CWL"/>
+                                </constraints>
+                                <state key="normal" image="mostarda"/>
                                 <connections>
                                     <action selector="mostard:" destination="aSA-Fj-6m2" eventType="touchUpInside" id="4fA-tP-wMU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG6-wT-Lmq">
-                                <rect key="frame" x="164" y="118" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Clean"/>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="45" placeholderIntrinsicHeight="45" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG6-wT-Lmq">
+                                <rect key="frame" x="310" y="65" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VG6-wT-Lmq" secondAttribute="height" multiplier="1:1" id="9aL-UN-mZM"/>
+                                </constraints>
+                                <state key="normal" image="botao_back_hotdog"/>
                                 <connections>
                                     <action selector="clearCanvas:" destination="aSA-Fj-6m2" eventType="touchUpInside" id="88s-5h-W6p"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="VG6-wT-Lmq" firstAttribute="top" secondItem="9Tp-Ft-4Ok" secondAttribute="top" constant="45" id="7MH-v2-0JQ"/>
+                            <constraint firstItem="9Tp-Ft-4Ok" firstAttribute="bottom" secondItem="VG6-wT-Lmq" secondAttribute="bottom" constant="557" id="BkH-FU-AbR"/>
+                            <constraint firstItem="YrI-HP-qFV" firstAttribute="top" secondItem="5l0-Y8-0vk" secondAttribute="topMargin" constant="15" id="Gp9-Yq-1sq"/>
+                            <constraint firstItem="JLZ-Vj-3rE" firstAttribute="top" secondItem="5l0-Y8-0vk" secondAttribute="top" id="HAf-6R-XHN"/>
+                            <constraint firstItem="YrI-HP-qFV" firstAttribute="leading" secondItem="9Tp-Ft-4Ok" secondAttribute="leading" constant="3" id="Iyh-Ia-UCj"/>
+                            <constraint firstItem="9Tp-Ft-4Ok" firstAttribute="trailing" secondItem="W7n-2x-R92" secondAttribute="trailing" id="JLz-c6-6OH"/>
+                            <constraint firstItem="Jgk-3f-RwK" firstAttribute="leading" secondItem="9Tp-Ft-4Ok" secondAttribute="leading" constant="50" id="K7i-Qp-zDS"/>
+                            <constraint firstItem="9Tp-Ft-4Ok" firstAttribute="bottom" secondItem="ook-Xu-bmK" secondAttribute="bottom" constant="30" id="KHU-ze-CYJ"/>
+                            <constraint firstItem="VG6-wT-Lmq" firstAttribute="leading" relation="lessThanOrEqual" secondItem="9Tp-Ft-4Ok" secondAttribute="leading" constant="310" id="MLz-DD-HjH"/>
+                            <constraint firstItem="W7n-2x-R92" firstAttribute="top" secondItem="5l0-Y8-0vk" secondAttribute="top" id="Odi-ly-FEO"/>
                             <constraint firstItem="a5n-8r-FXa" firstAttribute="trailing" secondItem="9Tp-Ft-4Ok" secondAttribute="trailing" id="P1s-WS-wTk"/>
                             <constraint firstItem="a5n-8r-FXa" firstAttribute="leading" secondItem="9Tp-Ft-4Ok" secondAttribute="leading" id="XNs-TL-ZKK"/>
                             <constraint firstItem="a5n-8r-FXa" firstAttribute="bottom" secondItem="9Tp-Ft-4Ok" secondAttribute="bottom" constant="-30" id="ee7-k3-Kbf"/>
+                            <constraint firstItem="JLZ-Vj-3rE" firstAttribute="bottom" secondItem="9Tp-Ft-4Ok" secondAttribute="bottom" id="h5f-3T-o34"/>
                             <constraint firstItem="a5n-8r-FXa" firstAttribute="top" secondItem="5l0-Y8-0vk" secondAttribute="top" id="hbx-vD-2z6"/>
+                            <constraint firstItem="W7n-2x-R92" firstAttribute="leading" secondItem="9Tp-Ft-4Ok" secondAttribute="leading" id="icY-Gy-gvj"/>
+                            <constraint firstItem="Jgk-3f-RwK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9Tp-Ft-4Ok" secondAttribute="top" priority="750" constant="510" id="jpb-Re-sXX"/>
+                            <constraint firstItem="9Tp-Ft-4Ok" firstAttribute="trailing" secondItem="VG6-wT-Lmq" secondAttribute="trailing" constant="20" id="jzL-B9-mKe"/>
+                            <constraint firstItem="9Tp-Ft-4Ok" firstAttribute="trailing" secondItem="JLZ-Vj-3rE" secondAttribute="trailing" constant="2" id="kAd-Or-d4d"/>
+                            <constraint firstItem="JLZ-Vj-3rE" firstAttribute="leading" secondItem="9Tp-Ft-4Ok" secondAttribute="leading" constant="2" id="mQr-QU-ULx"/>
+                            <constraint firstItem="ook-Xu-bmK" firstAttribute="leading" secondItem="Jgk-3f-RwK" secondAttribute="trailing" constant="37" id="nJQ-G6-9XP"/>
+                            <constraint firstItem="W7n-2x-R92" firstAttribute="bottom" secondItem="9Tp-Ft-4Ok" secondAttribute="bottom" id="rhR-wK-xOU"/>
+                            <constraint firstItem="YrI-HP-qFV" firstAttribute="centerX" secondItem="a5n-8r-FXa" secondAttribute="centerX" id="uLK-2O-u4R"/>
+                            <constraint firstItem="9Tp-Ft-4Ok" firstAttribute="bottom" secondItem="YrI-HP-qFV" secondAttribute="bottom" constant="5" id="vNu-iB-WFk"/>
+                            <constraint firstItem="Jgk-3f-RwK" firstAttribute="top" secondItem="ook-Xu-bmK" secondAttribute="top" id="wDI-hx-dnB"/>
+                            <constraint firstItem="Jgk-3f-RwK" firstAttribute="bottom" secondItem="ook-Xu-bmK" secondAttribute="bottom" id="wPX-7h-tsU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Tp-Ft-4Ok"/>
                     </view>
                     <connections>
                         <outlet property="canvas" destination="a5n-8r-FXa" id="jz7-UN-5ek"/>
+                        <outlet property="nuvem" destination="JLZ-Vj-3rE" id="6b5-4W-SoX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sL-1f-ckr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-879.375" y="-106.69014084507042"/>
+            <point key="canvasLocation" x="-880.79999999999995" y="-107.49625187406298"/>
         </scene>
     </scenes>
     <resources>
         <image name="HDD_0" width="750" height="1334"/>
+        <image name="HDNuvem_0" width="750" height="1334"/>
+        <image name="botao_back_hotdog" width="68" height="70"/>
+        <image name="cachorroquente_fundo" width="3128" height="5557"/>
+        <image name="ketchup" width="44" height="157"/>
+        <image name="mostarda" width="45" height="159"/>
     </resources>
 </document>

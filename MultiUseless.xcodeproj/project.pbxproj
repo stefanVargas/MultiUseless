@@ -8,7 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		710A2BD321273F61004EFF13 /* SauceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A2BD221273F61004EFF13 /* SauceView.swift */; };
-		71557DC621291FD000E10B8C /* music.wav in Resources */ = {isa = PBXBuildFile; fileRef = 71557DC521291FD000E10B8C /* music.wav */; };
+		710A2BD5212B2E98004EFF13 /* dance.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BD4212B2E97004EFF13 /* dance.mp3 */; };
+		710A2BE8212B65B6004EFF13 /* pig_bravo.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BD7212B65B6004EFF13 /* pig_bravo.atlas */; };
+		710A2BE9212B65B6004EFF13 /* PigScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A2BD8212B65B6004EFF13 /* PigScene.swift */; };
+		710A2BEA212B65B6004EFF13 /* pig_fundoAnimado.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BD9212B65B6004EFF13 /* pig_fundoAnimado.atlas */; };
+		710A2BEC212B65B6004EFF13 /* pig_assustado.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BDB212B65B6004EFF13 /* pig_assustado.atlas */; };
+		710A2BED212B65B6004EFF13 /* PigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A2BDC212B65B6004EFF13 /* PigViewController.swift */; };
+		710A2BEE212B65B6004EFF13 /* pigHappy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BDE212B65B6004EFF13 /* pigHappy.mp3 */; };
+		710A2BEF212B65B6004EFF13 /* pig_backsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BDF212B65B6004EFF13 /* pig_backsound.mp3 */; };
+		710A2BF0212B65B6004EFF13 /* pigAngry.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BE0212B65B6004EFF13 /* pigAngry.mp3 */; };
+		710A2BF1212B65B6004EFF13 /* pigScared.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BE1212B65B6004EFF13 /* pigScared.mp3 */; };
+		710A2BF2212B65B6004EFF13 /* wee.wav in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BE2212B65B6004EFF13 /* wee.wav */; };
+		710A2BF3212B65B6004EFF13 /* pig_mortal.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BE3212B65B6004EFF13 /* pig_mortal.atlas */; };
+		710A2BF4212B65B6004EFF13 /* pig_inicio.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BE4212B65B6004EFF13 /* pig_inicio.atlas */; };
+		710A2BF5212B65B6004EFF13 /* pig_feliz.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BE5212B65B6004EFF13 /* pig_feliz.atlas */; };
+		710A2BF6212B65B6004EFF13 /* PigStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BE6212B65B6004EFF13 /* PigStoryBoard.storyboard */; };
+		710A2BF7212B65B6004EFF13 /* PigScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 710A2BE7212B65B6004EFF13 /* PigScene.sks */; };
 		71557DC8212B162600E10B8C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71557DC7212B162600E10B8C /* PageViewController.swift */; };
 		71F8CF60212496C900F8CDF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF5F212496C900F8CDF7 /* AppDelegate.swift */; };
 		71F8CF62212496C900F8CDF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF61212496C900F8CDF7 /* ViewController.swift */; };
@@ -20,8 +35,6 @@
 		71F8CF83212496CB00F8CDF7 /* MultiUselessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF82212496CB00F8CDF7 /* MultiUselessUITests.swift */; };
 		71F8CF912124AA5A00F8CDF7 /* Hotdog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F8CF902124AA5A00F8CDF7 /* Hotdog.storyboard */; };
 		71F8CF942124AC4C00F8CDF7 /* HotDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CF932124AC4C00F8CDF7 /* HotDogViewController.swift */; };
-		71F8CF962124ACE300F8CDF7 /* HotDogScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 71F8CF952124ACE300F8CDF7 /* HotDogScene.sks */; };
-		71F8CFD82124AF6000F8CDF7 /* HotDogScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CFD72124AF6000F8CDF7 /* HotDogScene.swift */; };
 		71F8CFDA2125ED9900F8CDF7 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CFD92125ED9900F8CDF7 /* CanvasView.swift */; };
 		71F8CFDC21260E9F00F8CDF7 /* HotDogAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F8CFDB21260E9F00F8CDF7 /* HotDogAssets.xcassets */; };
 /* End PBXBuildFile section */
@@ -45,7 +58,22 @@
 
 /* Begin PBXFileReference section */
 		710A2BD221273F61004EFF13 /* SauceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SauceView.swift; sourceTree = "<group>"; };
-		71557DC521291FD000E10B8C /* music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = music.wav; path = ../../../Downloads/music.wav; sourceTree = "<group>"; };
+		710A2BD4212B2E97004EFF13 /* dance.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dance.mp3; path = ../../../../Downloads/dance.mp3; sourceTree = "<group>"; };
+		710A2BD7212B65B6004EFF13 /* pig_bravo.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pig_bravo.atlas; sourceTree = "<group>"; };
+		710A2BD8212B65B6004EFF13 /* PigScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PigScene.swift; sourceTree = "<group>"; };
+		710A2BD9212B65B6004EFF13 /* pig_fundoAnimado.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pig_fundoAnimado.atlas; sourceTree = "<group>"; };
+		710A2BDB212B65B6004EFF13 /* pig_assustado.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pig_assustado.atlas; sourceTree = "<group>"; };
+		710A2BDC212B65B6004EFF13 /* PigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PigViewController.swift; sourceTree = "<group>"; };
+		710A2BDE212B65B6004EFF13 /* pigHappy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pigHappy.mp3; sourceTree = "<group>"; };
+		710A2BDF212B65B6004EFF13 /* pig_backsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pig_backsound.mp3; sourceTree = "<group>"; };
+		710A2BE0212B65B6004EFF13 /* pigAngry.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pigAngry.mp3; sourceTree = "<group>"; };
+		710A2BE1212B65B6004EFF13 /* pigScared.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pigScared.mp3; sourceTree = "<group>"; };
+		710A2BE2212B65B6004EFF13 /* wee.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wee.wav; sourceTree = "<group>"; };
+		710A2BE3212B65B6004EFF13 /* pig_mortal.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pig_mortal.atlas; sourceTree = "<group>"; };
+		710A2BE4212B65B6004EFF13 /* pig_inicio.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pig_inicio.atlas; sourceTree = "<group>"; };
+		710A2BE5212B65B6004EFF13 /* pig_feliz.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pig_feliz.atlas; sourceTree = "<group>"; };
+		710A2BE6212B65B6004EFF13 /* PigStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PigStoryBoard.storyboard; sourceTree = "<group>"; };
+		710A2BE7212B65B6004EFF13 /* PigScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PigScene.sks; sourceTree = "<group>"; };
 		71557DC7212B162600E10B8C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		71F8CF5C212496C900F8CDF7 /* MultiUseless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiUseless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F8CF5F212496C900F8CDF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,8 +91,6 @@
 		71F8CF84212496CB00F8CDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71F8CF902124AA5A00F8CDF7 /* Hotdog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hotdog.storyboard; sourceTree = "<group>"; };
 		71F8CF932124AC4C00F8CDF7 /* HotDogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDogViewController.swift; sourceTree = "<group>"; };
-		71F8CF952124ACE300F8CDF7 /* HotDogScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HotDogScene.sks; sourceTree = "<group>"; };
-		71F8CFD72124AF6000F8CDF7 /* HotDogScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDogScene.swift; sourceTree = "<group>"; };
 		71F8CFD92125ED9900F8CDF7 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		71F8CFDB21260E9F00F8CDF7 /* HotDogAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HotDogAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,9 +120,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		710A2BD6212B65B6004EFF13 /* iPig */ = {
+			isa = PBXGroup;
+			children = (
+				710A2BD7212B65B6004EFF13 /* pig_bravo.atlas */,
+				710A2BD8212B65B6004EFF13 /* PigScene.swift */,
+				710A2BD9212B65B6004EFF13 /* pig_fundoAnimado.atlas */,
+				710A2BDB212B65B6004EFF13 /* pig_assustado.atlas */,
+				710A2BDC212B65B6004EFF13 /* PigViewController.swift */,
+				710A2BDD212B65B6004EFF13 /* PigSounds */,
+				710A2BE3212B65B6004EFF13 /* pig_mortal.atlas */,
+				710A2BE4212B65B6004EFF13 /* pig_inicio.atlas */,
+				710A2BE5212B65B6004EFF13 /* pig_feliz.atlas */,
+				710A2BE6212B65B6004EFF13 /* PigStoryBoard.storyboard */,
+				710A2BE7212B65B6004EFF13 /* PigScene.sks */,
+			);
+			name = iPig;
+			path = ../../../Downloads/iPig;
+			sourceTree = "<group>";
+		};
+		710A2BDD212B65B6004EFF13 /* PigSounds */ = {
+			isa = PBXGroup;
+			children = (
+				710A2BDE212B65B6004EFF13 /* pigHappy.mp3 */,
+				710A2BDF212B65B6004EFF13 /* pig_backsound.mp3 */,
+				710A2BE0212B65B6004EFF13 /* pigAngry.mp3 */,
+				710A2BE1212B65B6004EFF13 /* pigScared.mp3 */,
+				710A2BE2212B65B6004EFF13 /* wee.wav */,
+			);
+			path = PigSounds;
+			sourceTree = "<group>";
+		};
 		71F8CF53212496C900F8CDF7 = {
 			isa = PBXGroup;
 			children = (
+				710A2BD6212B65B6004EFF13 /* iPig */,
 				71F8CF922124AA9300F8CDF7 /* HotDog */,
 				71F8CF5E212496C900F8CDF7 /* MultiUseless */,
 				71F8CF76212496CB00F8CDF7 /* MultiUselessTests */,
@@ -153,11 +211,9 @@
 			children = (
 				71F8CF902124AA5A00F8CDF7 /* Hotdog.storyboard */,
 				71F8CF932124AC4C00F8CDF7 /* HotDogViewController.swift */,
-				71F8CF952124ACE300F8CDF7 /* HotDogScene.sks */,
-				71F8CFD72124AF6000F8CDF7 /* HotDogScene.swift */,
 				71F8CFD92125ED9900F8CDF7 /* CanvasView.swift */,
 				71F8CFDB21260E9F00F8CDF7 /* HotDogAssets.xcassets */,
-				71557DC521291FD000E10B8C /* music.wav */,
+				710A2BD4212B2E97004EFF13 /* dance.mp3 */,
 				710A2BD221273F61004EFF13 /* SauceView.swift */,
 			);
 			path = HotDog;
@@ -267,13 +323,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				710A2BF4212B65B6004EFF13 /* pig_inicio.atlas in Resources */,
+				710A2BF2212B65B6004EFF13 /* wee.wav in Resources */,
+				710A2BF3212B65B6004EFF13 /* pig_mortal.atlas in Resources */,
+				710A2BEF212B65B6004EFF13 /* pig_backsound.mp3 in Resources */,
+				710A2BF1212B65B6004EFF13 /* pigScared.mp3 in Resources */,
+				710A2BEC212B65B6004EFF13 /* pig_assustado.atlas in Resources */,
 				71F8CF6D212496CB00F8CDF7 /* LaunchScreen.storyboard in Resources */,
+				710A2BF0212B65B6004EFF13 /* pigAngry.mp3 in Resources */,
 				71F8CFDC21260E9F00F8CDF7 /* HotDogAssets.xcassets in Resources */,
+				710A2BD5212B2E98004EFF13 /* dance.mp3 in Resources */,
+				710A2BE8212B65B6004EFF13 /* pig_bravo.atlas in Resources */,
 				71F8CF912124AA5A00F8CDF7 /* Hotdog.storyboard in Resources */,
-				71F8CF962124ACE300F8CDF7 /* HotDogScene.sks in Resources */,
+				710A2BEA212B65B6004EFF13 /* pig_fundoAnimado.atlas in Resources */,
+				710A2BEE212B65B6004EFF13 /* pigHappy.mp3 in Resources */,
 				71F8CF6A212496CB00F8CDF7 /* Assets.xcassets in Resources */,
+				710A2BF6212B65B6004EFF13 /* PigStoryBoard.storyboard in Resources */,
+				710A2BF7212B65B6004EFF13 /* PigScene.sks in Resources */,
 				71F8CF65212496C900F8CDF7 /* Main.storyboard in Resources */,
-				71557DC621291FD000E10B8C /* music.wav in Resources */,
+				710A2BF5212B65B6004EFF13 /* pig_feliz.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,13 +367,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				710A2BD321273F61004EFF13 /* SauceView.swift in Sources */,
-				71F8CFD82124AF6000F8CDF7 /* HotDogScene.swift in Sources */,
+				710A2BED212B65B6004EFF13 /* PigViewController.swift in Sources */,
 				71F8CF68212496C900F8CDF7 /* MultiUseless.xcdatamodeld in Sources */,
 				71F8CFDA2125ED9900F8CDF7 /* CanvasView.swift in Sources */,
 				71F8CF942124AC4C00F8CDF7 /* HotDogViewController.swift in Sources */,
 				71F8CF62212496C900F8CDF7 /* ViewController.swift in Sources */,
 				71F8CF60212496C900F8CDF7 /* AppDelegate.swift in Sources */,
 				71557DC8212B162600E10B8C /* PageViewController.swift in Sources */,
+				710A2BE9212B65B6004EFF13 /* PigScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
